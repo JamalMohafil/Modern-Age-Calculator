@@ -1,0 +1,180 @@
+/* 
+ *\ #style.css \*
+*/
+
+/*
+   * Github Account : JamalMohafil 
+   * Contact : jamalmohafil@gmail.com 
+   * Copyright : Jamal Mohafil 2023
+*/
+
+
+/* link Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+/* Custom Property */
+:root {
+    
+    --white-color:
+    --bg-color:
+    --main-color:
+    --pink-color:
+    --box-shadow:
+    --transition:
+}
+[data-theme='dark']{
+    color-scheme: dark;
+
+    --white-color:#ffffff;
+    --bg-color:#232227;
+    --main-color:#1cb2a0    ;
+    --pink-color:#ff5e98;
+    --box-shadow:rgba(255, 255, 255, 0.1);
+    --transition:0.3s linear;
+}
+[data-theme='light']{
+    color-scheme: light;
+
+    --white-color:#ffffff;
+    --bg-color:#ffffff;
+    --main-color:#52e638;
+    --pink-color:#ff5e98;
+    --box-shadow:rgba(0, 0, 0, 0.1);
+    --transition:0.3s linear;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+    transition: var(--transition);
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+  
+li { list-style: none; }
+
+a,
+img,
+svg,
+button,
+input,
+span {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--main-color);
+    color:#111;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+    height: 45px;
+    width: 240px;
+    margin: auto;
+    margin-top: 20px;
+}
+.btn-primary:hover {
+    border: 1px solid var(--main-color);
+    background: #232227;
+    box-shadow: 0 11px 12px rgba(0,0,0,0.1);
+
+    color: var(--white-color);
+}
+input,
+button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: var(--white-color);
+}
+
+input { width: 100%; }
+
+button { cursor: pointer; }
+
+
+/* Age Styling */
+form {
+    margin: 150px ;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 4px var(--box-shadow);
+    padding: 40px 15px;
+    border-radius: 25px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--main-color);
+}
+
+.block input {
+    width: 100px;
+    padding: 10px;
+    border: double 1px var(--main-color);
+    border-radius: 4px;
+}
+
+input:focus {
+    border: 1px solid rgba(133,133,133,1);
+}
+
+.block {
+    text-align: center;
+    width: 135px;
+    padding: 5px 20px;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+.title {
+    text-align: center;
+    font-size: 22px;
+    margin: 15px 0;
+    letter-spacing: 0.5px;
+    color:var(--white-color);
+}
+
+#age {
+    color: var(--white-color);
+}
+
+.mode {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    transform: translate(0,-15%);
+    background: var(--bg-color);
+    padding: 8px 14px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 10px var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.mode span {
+    display: none;
+}
+.mode span.active {
+    display: block;
+}
