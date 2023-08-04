@@ -18,9 +18,14 @@ function age(){
         getMonth = getMonth + 12 
         getYear = getYear - 1
     }
+   
     let d = getDay - day
     let m = getMonth - month
     let y = getYear - year
+    if(m == 0){
+        getMonth = getMonth + 12
+    }
+   
     console.log(`Day Is : ${d}, Month Is : ${m}, Year Is : ${y}`)
 
     document.getElementById('age').innerHTML = `Your Age Is :<br> Day: ${d},

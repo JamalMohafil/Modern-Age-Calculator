@@ -32,6 +32,8 @@
     --pink-color:#ff5e98;
     --box-shadow:rgba(255, 255, 255, 0.1);
     --transition:0.3s linear;
+    --btn-color:var(--bg-color);
+    --text-color:#fff;
 }
 [data-theme='light']{
     color-scheme: light;
@@ -40,8 +42,11 @@
     --bg-color:#ffffff;
     --main-color:#52e638;
     --pink-color:#ff5e98;
+    --btn-color:#ffffff;
+
     --box-shadow:rgba(0, 0, 0, 0.1);
     --transition:0.3s linear;
+    --text-color:#111;
 }
 *,
 *::before,
@@ -83,7 +88,7 @@ a {
 
 .btn-primary {
     background-color: var(--main-color);
-    color:#111;
+    color:var(--btn-color);
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     border-radius: 4px;
     transition: var(--transition);
@@ -95,10 +100,10 @@ a {
 }
 .btn-primary:hover {
     border: 1px solid var(--main-color);
-    background: #232227;
+    background: var(--btn-color);
     box-shadow: 0 11px 12px rgba(0,0,0,0.1);
 
-    color: var(--white-color);
+    color: var(--text-color);
 }
 input,
 button {
@@ -132,6 +137,7 @@ h2 {
     padding: 10px;
     border: double 1px var(--main-color);
     border-radius: 4px;
+    color: var(--text-color) !important;
 }
 
 input:focus {
@@ -151,11 +157,11 @@ input:focus {
     font-size: 22px;
     margin: 15px 0;
     letter-spacing: 0.5px;
-    color:var(--white-color);
+    color:var(--text-color);
 }
 
 #age {
-    color: var(--white-color);
+    color: var(--text-color);
 }
 
 .mode {
