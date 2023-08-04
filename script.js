@@ -24,6 +24,7 @@ function age(){
     let y = getYear - year
     if(m == 0){
         getMonth = getMonth + 12
+        y--
     }
    
     console.log(`Day Is : ${d}, Month Is : ${m}, Year Is : ${y}`)
